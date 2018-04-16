@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Adi Sethupathy.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -30,7 +30,7 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem2a()
+    #run_test_practice_problem2a()
     run_test_practice_problem2b()
 
 
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,6 +55,39 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+
+    list = [1, 2, 3, 4]
+
+
+
+    expected = [2, 3, 4, 5]
+    actual = practice_problem2a(list, 1)
+    print()
+    print("Expected:", expected)
+    print("actual:", actual)
+
+    expected = [3, 4, 5, 6]
+    actual = practice_problem2a(list, 2)
+    print()
+    print("Expected:", expected)
+    print("actual:", actual)
+
+    expected = [4, 5, 6, 7]
+    actual = practice_problem2a(list, 3)
+    print()
+    print("Expected:", expected)
+    print("actual:", actual)
+
+    expected = [5, 6, 7, 8]
+    actual = practice_problem2a(list, 4)
+    print()
+    print("Expected:", expected)
+    print("actual:", actual)
+
+
+
+
+
 
 
 def practice_problem2a(sequence, delta):
@@ -76,13 +109,21 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+
+    newlist = []
+
+    for k in range(len(sequence)):
+        new_index = sequence[k] + delta
+        newlist += [new_index]
+
+    return newlist
 
 
 def run_test_practice_problem2b():
@@ -170,13 +211,21 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+
+    new_string = ''
+
+    for k in range(len(sequence)):
+        if (len(sequence[k]) > 0):
+            newletter = sequence[k][0]
+            new_string += str(newletter)
+    return new_string
 
 
 # ----------------------------------------------------------------------
